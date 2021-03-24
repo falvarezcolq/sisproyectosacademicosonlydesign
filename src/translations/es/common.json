@@ -1,0 +1,12 @@
+{
+    "login" : {
+        "main_title":"Proyectos Académicos de Titulación",
+        "title":"Bienvenido al Sistema de proyectos académicos",
+        "sign_in_to_start":"Ingresa para iniciar sessión",
+        "username":"Nombre de usuario",
+        "password":"Contraseña",
+        "remember_me":"Recorar contraseña",
+        "forgot_password":"¿Olvidate tu contraseña?",
+        "sign_in":"INGRESAR"
+    }
+}

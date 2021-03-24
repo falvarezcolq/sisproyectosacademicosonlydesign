@@ -11,11 +11,11 @@ import Config from '../utils/Config';
 
 
 
-// import {withTranslation} from "react-i18next";
-// import { Link } from 'react-router-dom';
+import {withTranslation} from "react-i18next";
+import { Link } from 'react-router-dom';
 
 
-class Login extends React.Component{
+class LoginComponent extends React.Component{
 
     state={
         username:"",
@@ -88,7 +88,7 @@ class Login extends React.Component{
 
     render(){
 
-        // const { t ,i18n} = this.props;
+        const { t ,i18n} = this.props;
 
         // if (AuthHandler.loggedIn()){
         //     return <Redirect to={Config.homeUrl} />
@@ -114,13 +114,13 @@ class Login extends React.Component{
                     />
                 <div className="login-box">
                 <div className="logo">
-                    <a href="#">SSCPAT</a>
-                    <small>Sistema de seguimiento y control de proyectos de titulacion</small>
+                    <a href="#">{t('login.main_title')}</a>
+                    <small>{t('login.title', {framework:'React'})}</small>
                 </div>
                 <div className="card">
                     <div className="body">
                         <form id="sign_in" method="POST" onSubmit={this.formSubmit}>
-                            <div className="msg">sdddd</div>
+                            <div className="msg">{t('login.sign_in_to_start')}</div>
                             <div className="input-group">
                                 <span className="input-group-addon">
                                     <i className="material-icons">person</i>
@@ -130,7 +130,7 @@ class Login extends React.Component{
                                         type="text" 
                                         className="form-control" 
                                         name="username" 
-                                        placeholder="Nombre de usuario"
+                                        placeholder={t('login.username')} 
                                         required 
                                         // autofocus="true"
                                         onChange={this.saveInputs}
@@ -146,7 +146,7 @@ class Login extends React.Component{
                                         type="password" 
                                         className="form-control" 
                                         name="password" 
-                                        placeholder="Contrase;a" 
+                                        placeholder={t('login.password')} 
                                         required
                                         onChange={this.saveInputs}/>
                                 </div>
@@ -154,16 +154,16 @@ class Login extends React.Component{
                             <div className="row">
                                 <div className="col-xs-8 p-t-5">
                                     <input type="checkbox" name="rememberme" id="rememberme" className="filled-in chk-col-pink"/>
-                                    <label htmlFor="rememberme">Recorda contraseña</label>
+                                    <label htmlFor="rememberme">{t('login.remember_me')}</label>
                                 </div>
                                 <div className="col-xs-4">
                                     {/* <button className="btn btn-block bg-pink waves-effect" type="submit">{t('login.sign_in')}</button> */}
-                                    <a href={Config.aHomeUrl} className="btn btn-block bg-pink waves-effect" type="submit">Ingresar</a>
+                                    <a href={Config.aHomeUrl} className="btn btn-block bg-pink waves-effect" type="submit">{t('login.sign_in')}</a>
                                 </div>
                             </div>
                             <div className="row m-t-15 m-b--20">
                                 <div className="col-xs-6">
-                                    <a href="forgot-password.html">Olvide mi contraseña</a>
+                                    <a href="forgot-password.html">{t('login.forgot_password')}</a>
                                 </div>
                             </div>
                             {/* {this.getMessages()} */}
@@ -176,6 +176,6 @@ class Login extends React.Component{
     }
 }
 
-// const Login = withTranslation('common')(LoginComponent)
+const Login = withTranslation('common')(LoginComponent)
 
 export default Login;
