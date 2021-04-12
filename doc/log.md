@@ -6,8 +6,10 @@ install
 npm install adminbsb-materialdesign
 ```
 
+
 ## translate
 install for translate
+
 ```
 npm install --save i18next react-i18next
 ```

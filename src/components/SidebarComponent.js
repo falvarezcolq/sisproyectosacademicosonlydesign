@@ -123,11 +123,11 @@ class Sidebar extends React.Component {
                                 )}
 
                                 <li>
-                                    <a href="javascript:void(0);" className="menu-toggle waves-effect waves-block">
+                                    <a href="javascript:void(0);" className="menu-toggle waves-effect waves-block ">
                                         <i className="material-icons">widgets</i>
                                         <span>Widgets</span>
                                     </a>
-                                    <ul className="ml-menu" style={{display: "none"}}>
+                                    <ul className="ml-menu" style={{display: "block"}}>
                                         <li>
                                             <a href="javascript:void(0);" className="menu-toggle waves-effect waves-block">
                                                 <span>Cards</span>
